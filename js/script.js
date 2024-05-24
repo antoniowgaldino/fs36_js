@@ -45,31 +45,8 @@ function divide() {
     document.getElementById('resultado').innerHTML = result.toString().replace(".", ",");
 }
 
-/* function limpar() {
-    document.getElementById('n1').value='';
-    document.getElementById('n2').value='';
-    document.getElementById('resultado').value='0';
-} */
-
-/*
-Objetivo: Calcular a média de 2 números
-1- Coletar os 2 números
-2- Somar os 2 números
-3- Dividir a soma pela quantidade
-4- Mostrar o resultado
-*/
-
-/* let n1 = 100,
-    n2 = 900;
-
-function soma() {
-    // console.log(n1 + n2);
-    return n1+n2
+function limpar() {
+    document.getElementById('n1').value ='';
+    document.getElementById('n2').value ='';
+    document.getElementById('resultado').innerHTML ='';
 }
-
-function media() {
-    // let result = soma();
-    console.log(soma() / 2);
-}
-
-media() */
