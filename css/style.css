@@ -5,3 +5,11 @@
 .linha {
     margin-bottom: 20px;
 }
+
+#resultado {
+    color: white;
+    background-color: cadetblue;
+    font-size: 5em;
+    /* display: none; */
+    justify-content: center;
+}
