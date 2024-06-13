@@ -4,23 +4,39 @@ const
     conteudoDiv = document.querySelector('#resultado');
 
 function soma() {
-    let result = parseFloat(num1.value) + parseFloat(num2.value);
-    exibirResultado(result);
+    if (num1.value !== '' && num2.value !== '') {
+        let result = parseFloat(num1.value) + parseFloat(num2.value);
+        exibirResultado(result);    
+    } else {
+        alert('Preencha os campos para realizar a soma!');
+    }
 }
 
 function subtrai() {
-    let result = parseFloat(num1.value) - parseFloat(num2.value);
-    exibirResultado(result);
+    if (num1.value !== '' && num2.value !== '') {
+        let result = parseFloat(num1.value) - parseFloat(num2.value);
+        exibirResultado(result);   
+    } else {
+        alert('Preencha os campos para realizar a substração!');
+    }
 }
 
 function multiplica() {
-    let result = parseFloat(num1.value) * parseFloat(num2.value);
-    exibirResultado(result);
+    if (num1.value !== '' && num2.value !== '') {
+        let result = parseFloat(num1.value) * parseFloat(num2.value);
+        exibirResultado(result);
+    } else {
+        alert('Preencha os campos para realizar a multiplicação!');
+    }
 }
 
 function divide() {
-    let result = parseFloat(num1.value) / parseFloat(num2.value);
-    exibirResultado(result);
+    if (num1.value !== '' && num2.value !== '') {
+        let result = parseFloat(num1.value) / parseFloat(num2.value);
+    exibirResultado(result);  
+    } else {
+        alert('Preencha os campos para realizar a divisão!');
+    }
 }
 
 function exibirResultado(result) {
