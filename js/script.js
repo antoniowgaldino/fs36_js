@@ -3,40 +3,52 @@ const
     num2 = document.getElementById('n2');
     conteudoDiv = document.querySelector('#resultado');
 
-function soma() {
-    if (num1.value !== '' && num2.value !== '') {
-        let result = parseFloat(num1.value) + parseFloat(num2.value);
-        exibirResultado(result);    
+function calcula(e) {
+    const operacao = e.innerText;
+
+    if (num1.value === '' && num2.value === '') {
+        alert ('Preencha os campos para realizar a operação!')
     } else {
-        alert('Preencha os campos para realizar a soma!');
+        if (num1.value === '') {
+            alert('Preencha os campo 1!');
+        } else if (num2.value === '') {
+            alert('Preencha os campo 2!');
+        } else {
+            executarOperacao(operacao);
+        }
     }
+}
+
+function executarOperacao(op) {
+    if (op === '+') {
+        soma();
+    } else if (op === '-') {
+        subtrai();
+    } else if (op === '*') {
+        multiplica();
+    } else if (op === '/') {
+        divide();
+    }
+}
+
+function soma() {
+    let result = parseFloat(num1.value) + parseFloat(num2.value);
+    exibirResultado(result);
 }
 
 function subtrai() {
-    if (num1.value !== '' && num2.value !== '') {
-        let result = parseFloat(num1.value) - parseFloat(num2.value);
-        exibirResultado(result);   
-    } else {
-        alert('Preencha os campos para realizar a substração!');
-    }
+    let result = parseFloat(num1.value) - parseFloat(num2.value);
+    exibirResultado(result);
 }
 
 function multiplica() {
-    if (num1.value !== '' && num2.value !== '') {
-        let result = parseFloat(num1.value) * parseFloat(num2.value);
-        exibirResultado(result);
-    } else {
-        alert('Preencha os campos para realizar a multiplicação!');
-    }
+    let result = parseFloat(num1.value) * parseFloat(num2.value);
+    exibirResultado(result);
 }
 
 function divide() {
-    if (num1.value !== '' && num2.value !== '') {
-        let result = parseFloat(num1.value) / parseFloat(num2.value);
-    exibirResultado(result);  
-    } else {
-        alert('Preencha os campos para realizar a divisão!');
-    }
+    let result = parseFloat(num1.value) / parseFloat(num2.value);
+    exibirResultado(result);
 }
 
 function exibirResultado(result) {
@@ -45,5 +57,5 @@ function exibirResultado(result) {
 
 function limpar() {
     conteudoDiv.style.display = 'none';
-    conteudoDiv.innerHTML ='';
+    conteudoDiv.innerHTML = '';
 }
